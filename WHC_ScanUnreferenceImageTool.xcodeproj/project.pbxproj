@@ -11,6 +11,8 @@
 		FEF133971D261AA8003F37CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF133961D261AA8003F37CC /* ViewController.swift */; };
 		FEF133991D261AA8003F37CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF133981D261AA8003F37CC /* Assets.xcassets */; };
 		FEF1339C1D261AA8003F37CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF1339A1D261AA8003F37CC /* Main.storyboard */; };
+		FEF133A41D261D83003F37CC /* Tool.gif in Resources */ = {isa = PBXBuildFile; fileRef = FEF133A31D261D83003F37CC /* Tool.gif */; };
+		FEF133A61D261DA8003F37CC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FEF133A51D261DA8003F37CC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		FEF133981D261AA8003F37CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEF1339B1D261AA8003F37CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEF1339D1D261AA8003F37CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF133A31D261D83003F37CC /* Tool.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Tool.gif; sourceTree = "<group>"; };
+		FEF133A51D261DA8003F37CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 		FEF133881D261AA8003F37CC = {
 			isa = PBXGroup;
 			children = (
+				FEF133A51D261DA8003F37CC /* README.md */,
 				FEF133931D261AA8003F37CC /* WHC_ScanUnreferenceImageTool */,
 				FEF133921D261AA8003F37CC /* Products */,
 			);
@@ -52,6 +57,7 @@
 		FEF133931D261AA8003F37CC /* WHC_ScanUnreferenceImageTool */ = {
 			isa = PBXGroup;
 			children = (
+				FEF133A31D261D83003F37CC /* Tool.gif */,
 				FEF133941D261AA8003F37CC /* AppDelegate.swift */,
 				FEF133961D261AA8003F37CC /* ViewController.swift */,
 				FEF133981D261AA8003F37CC /* Assets.xcassets */,
@@ -121,6 +127,7 @@
 			files = (
 				FEF133991D261AA8003F37CC /* Assets.xcassets in Resources */,
 				FEF1339C1D261AA8003F37CC /* Main.storyboard in Resources */,
+				FEF133A41D261D83003F37CC /* Tool.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF133A61D261DA8003F37CC /* README.md in Sources */,
 				FEF133971D261AA8003F37CC /* ViewController.swift in Sources */,
 				FEF133951D261AA8003F37CC /* AppDelegate.swift in Sources */,
 			);
