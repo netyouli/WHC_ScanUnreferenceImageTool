@@ -692,7 +692,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mS8-b8-CqD">
-                                <rect key="frame" x="705" y="13" width="92" height="32"/>
+                                <rect key="frame" x="705" y="33" width="92" height="32"/>
                                 <buttonCell key="cell" type="push" title="开始扫描" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4XW-BH-hk6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -736,10 +736,26 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32Y-cp-9n9">
+                                <rect key="frame" x="710" y="3" width="68" height="18"/>
+                                <buttonCell key="cell" type="radio" title="android" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="9Lg-YP-xO4">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Av3-4n-JKS">
+                                <rect key="frame" x="710" y="20" width="44" height="18"/>
+                                <buttonCell key="cell" type="radio" title="iOS" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="6va-Zf-ajx">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="androidRadio" destination="32Y-cp-9n9" id="v1R-Ep-0fI"/>
                         <outlet property="directoryText" destination="QOM-B4-9cM" id="Joi-bg-nwL"/>
+                        <outlet property="iOSRadio" destination="Av3-4n-JKS" id="ufo-MY-dJZ"/>
                         <outlet property="openDirectoryButton" destination="Cpi-iQ-eGw" id="98R-lq-aO8"/>
                         <outlet property="processBar" destination="AnY-Cs-cQE" id="rV0-5t-J2p"/>
                         <outlet property="progressLabel" destination="8Wt-xT-q8h" id="cPx-X6-V1p"/>

@@ -8,20 +8,30 @@
 
 import Cocoa
 
+enum WHCScanProjectType {
+    case iOS
+    case Android
+}
+
 class ViewController: NSViewController {
     
-    @IBOutlet var directoryText: NSTextField!
-    @IBOutlet var openDirectoryButton: NSButton!
-    @IBOutlet var resultContentView: NSTextField!
-    @IBOutlet var scanButton: NSButton!
-    @IBOutlet var progressLabel: NSTextField!
-    @IBOutlet var processBar: NSProgressIndicator!
+    @IBOutlet weak var directoryText: NSTextField!
+    @IBOutlet weak var openDirectoryButton: NSButton!
+    @IBOutlet weak var resultContentView: NSTextField!
+    @IBOutlet weak var scanButton: NSButton!
+    @IBOutlet weak var progressLabel: NSTextField!
+    @IBOutlet weak var processBar: NSProgressIndicator!
+    
+    @IBOutlet weak var iOSRadio: NSButton!
+    @IBOutlet weak var androidRadio: NSButton!
     
     private var filePathArray = [String]()
     private var imageNameArray = [String]()
     
     private var noReferenceImageNameArray = [String]()
-    let fileManager = NSFileManager.defaultManager()
+    private let fileManager = NSFileManager.defaultManager()
+    private var scanProjectType = WHCScanProjectType.iOS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,6 +53,11 @@ class ViewController: NSViewController {
     }
     
     @IBAction func clickStartScan(sender: NSButton) {
+        if (iOSRadio.state == 1) {
+            scanProjectType = .iOS
+        }else {
+            scanProjectType = .Android
+        }
         self.processBar.maxValue = 1.0
         self.processBar.minValue = 0.0
         if self.directoryText.stringValue.characters.count > 0 {
@@ -65,9 +80,18 @@ class ViewController: NSViewController {
                         let bookData = try! NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe);
                         let fileContent = NSString(data: bookData, encoding: NSUTF8StringEncoding)
                         if fileContent != nil {
-                            if fileContent!.containsString("\"" + imageName) {
-                                isReference = true
-                                break
+                            switch self.scanProjectType {
+                                case .Android:
+                                    if fileContent!.containsString("@drawable/" + imageName) ||
+                                       fileContent!.containsString("R.drawable." + imageName) {
+                                        isReference = true
+                                        break
+                                    }
+                                case .iOS:
+                                    if fileContent!.containsString("\"" + imageName) {
+                                        isReference = true
+                                        break
+                                    }
                             }
                         }
                     }
@@ -92,33 +116,57 @@ class ViewController: NSViewController {
                     let tempDirectoryFileNameArray = try! fileManager.contentsOfDirectoryAtPath(pathName)
                     self.execScan(tempDirectoryFileNameArray, path: pathName)
                 }else {
-                    if fileName.containsString(".png") || fileName.containsString(".jpg") {
+                    if fileName.containsString(".png") || fileName.containsString(".jpg") ||
+                       fileName.containsString(".jpeg") || fileName.containsString(".gif") {
                         let name = (fileName as NSString)
-                        var suffRange = name.rangeOfString("@")
-                        if suffRange.location != NSNotFound {
-                            if !self.imageNameArray.contains(name.substringToIndex(suffRange.location)) {
-                                self.imageNameArray.append(name.substringToIndex(suffRange.location))
-                            }
-                        }else {
-                            suffRange = name.rangeOfString(".")
-                            if suffRange.location != NSNotFound {
-                                if !self.imageNameArray.contains(name.substringToIndex(suffRange.location)) {
-                                    self.imageNameArray.append(name.substringToIndex(suffRange.location))
+                        switch scanProjectType {
+                            case .Android:
+                                let suffRange = name.rangeOfString(".")
+                                if suffRange.location != NSNotFound {
+                                    if !self.imageNameArray.contains(name.substringToIndex(suffRange.location)) {
+                                        self.imageNameArray.append(name.substringToIndex(suffRange.location))
+                                    }
+                                }else {
+                                    if !self.imageNameArray.contains(fileName) {
+                                        self.imageNameArray.append(fileName)
+                                    }
                                 }
-                            }else {
-                                if !self.imageNameArray.contains(fileName) {
-                                    self.imageNameArray.append(fileName)
+                            case .iOS:
+                                var suffRange = name.rangeOfString("@")
+                                if suffRange.location != NSNotFound {
+                                    if !self.imageNameArray.contains(name.substringToIndex(suffRange.location)) {
+                                        self.imageNameArray.append(name.substringToIndex(suffRange.location))
+                                    }
+                                }else {
+                                    suffRange = name.rangeOfString(".")
+                                    if suffRange.location != NSNotFound {
+                                        if !self.imageNameArray.contains(name.substringToIndex(suffRange.location)) {
+                                            self.imageNameArray.append(name.substringToIndex(suffRange.location))
+                                        }
+                                    }else {
+                                        if !self.imageNameArray.contains(fileName) {
+                                            self.imageNameArray.append(fileName)
+                                        }
+                                    }
                                 }
-                            }
                         }
+                        
                     }else if fileName != ".DS_Store" {
                         let name = (fileName as NSString)
                         let suffRange = name.rangeOfString(".")
                         if suffRange.location != NSNotFound {
                             let suff = name.substringFromIndex(suffRange.location + suffRange.length)
-                            if suff == "m" || suff == "swift" || suff == "xib" || suff == ".storyboard"{
-                                self.filePathArray.append(pathName)
+                            switch scanProjectType {
+                                case .Android:
+                                    if suff == "java" || suff == "xml" {
+                                        self.filePathArray.append(pathName)
+                                    }
+                                case .iOS:
+                                    if suff == "m" || suff == "swift" || suff == "xib" || suff == ".storyboard"{
+                                        self.filePathArray.append(pathName)
+                                    }
                             }
+                            
                         }
                     }
                 }
