@@ -4,7 +4,7 @@
 //
 //  Created by WHC on 16/7/1.
 //  Copyright © 2016年 WHC. All rights reserved.
-//
+//  Github <https://github.com/netyouli/WHC_ScanUnreferenceImageTool>
 
 import Cocoa
 

@@ -4,7 +4,7 @@
 //
 //  Created by WHC on 16/7/1.
 //  Copyright © 2016年 WHC. All rights reserved.
-//
+//  Github <https://github.com/netyouli/WHC_ScanUnreferenceImageTool>
 
 import Cocoa
 
@@ -116,7 +116,7 @@ class ViewController: NSViewController {
                         let suffRange = name.rangeOfString(".")
                         if suffRange.location != NSNotFound {
                             let suff = name.substringFromIndex(suffRange.location + suffRange.length)
-                            if suff == "m" || suff == "swift" || suff == "xib"{
+                            if suff == "m" || suff == "swift" || suff == "xib" || suff == ".storyboard"{
                                 self.filePathArray.append(pathName)
                             }
                         }
