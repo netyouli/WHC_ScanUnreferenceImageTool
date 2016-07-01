@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEF133951D261AA8003F37CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF133941D261AA8003F37CC /* AppDelegate.swift */; };
+		FEF133971D261AA8003F37CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF133961D261AA8003F37CC /* ViewController.swift */; };
+		FEF133991D261AA8003F37CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF133981D261AA8003F37CC /* Assets.xcassets */; };
+		FEF1339C1D261AA8003F37CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF1339A1D261AA8003F37CC /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FEF133911D261AA8003F37CC /* WHC_ScanUnreferenceImageTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHC_ScanUnreferenceImageTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF133941D261AA8003F37CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEF133961D261AA8003F37CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEF133981D261AA8003F37CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEF1339B1D261AA8003F37CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEF1339D1D261AA8003F37CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEF1338E1D261AA8003F37CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEF133881D261AA8003F37CC = {
+			isa = PBXGroup;
+			children = (
+				FEF133931D261AA8003F37CC /* WHC_ScanUnreferenceImageTool */,
+				FEF133921D261AA8003F37CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEF133921D261AA8003F37CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEF133911D261AA8003F37CC /* WHC_ScanUnreferenceImageTool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEF133931D261AA8003F37CC /* WHC_ScanUnreferenceImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				FEF133941D261AA8003F37CC /* AppDelegate.swift */,
+				FEF133961D261AA8003F37CC /* ViewController.swift */,
+				FEF133981D261AA8003F37CC /* Assets.xcassets */,
+				FEF1339A1D261AA8003F37CC /* Main.storyboard */,
+				FEF1339D1D261AA8003F37CC /* Info.plist */,
+			);
+			path = WHC_ScanUnreferenceImageTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEF133901D261AA8003F37CC /* WHC_ScanUnreferenceImageTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEF133A01D261AA8003F37CC /* Build configuration list for PBXNativeTarget "WHC_ScanUnreferenceImageTool" */;
+			buildPhases = (
+				FEF1338D1D261AA8003F37CC /* Sources */,
+				FEF1338E1D261AA8003F37CC /* Frameworks */,
+				FEF1338F1D261AA8003F37CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WHC_ScanUnreferenceImageTool;
+			productName = WHC_ScanUnreferenceImageTool;
+			productReference = FEF133911D261AA8003F37CC /* WHC_ScanUnreferenceImageTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEF133891D261AA8003F37CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = WHC;
+				TargetAttributes = {
+					FEF133901D261AA8003F37CC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FEF1338C1D261AA8003F37CC /* Build configuration list for PBXProject "WHC_ScanUnreferenceImageTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEF133881D261AA8003F37CC;
+			productRefGroup = FEF133921D261AA8003F37CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEF133901D261AA8003F37CC /* WHC_ScanUnreferenceImageTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEF1338F1D261AA8003F37CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF133991D261AA8003F37CC /* Assets.xcassets in Resources */,
+				FEF1339C1D261AA8003F37CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEF1338D1D261AA8003F37CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF133971D261AA8003F37CC /* ViewController.swift in Sources */,
+				FEF133951D261AA8003F37CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FEF1339A1D261AA8003F37CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEF1339B1D261AA8003F37CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEF1339E1D261AA8003F37CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEF1339F1D261AA8003F37CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FEF133A11D261AA8003F37CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = WHC_ScanUnreferenceImageTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WHC.WHC-ScanUnreferenceImageTool";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FEF133A21D261AA8003F37CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = WHC_ScanUnreferenceImageTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WHC.WHC-ScanUnreferenceImageTool";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEF1338C1D261AA8003F37CC /* Build configuration list for PBXProject "WHC_ScanUnreferenceImageTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF1339E1D261AA8003F37CC /* Debug */,
+				FEF1339F1D261AA8003F37CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEF133A01D261AA8003F37CC /* Build configuration list for PBXNativeTarget "WHC_ScanUnreferenceImageTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF133A11D261AA8003F37CC /* Debug */,
+				FEF133A21D261AA8003F37CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEF133891D261AA8003F37CC /* Project object */;
+}
