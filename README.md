@@ -7,7 +7,6 @@
 - **咨询**: 712641411
 - **作者**: 吴海超
 
-<<<<<<< HEAD
 效果
 ==============
 ![](https://github.com/netyouli/WHC_ScanUnreferenceImageTool/blob/master/WHC_ScanUnreferenceImageTool/Tool.gif)
@@ -16,7 +15,6 @@
 ###作者：吴海超
 ###推荐: 模型对象存储数据库: https://github.com/netyouli/WHC_ModelSqliteKit
 ###推荐: 高效易用自动布局库: https://github.com/netyouli/WHC_AutoLayoutKit
->>>>>>> 9b33b4e62984a2b375765b0149528499abde7c12
 
 推荐
 ==============
