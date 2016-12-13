@@ -23,7 +23,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-// VERSON (1.0.2)
+// VERSON (1.0.3)
 import Cocoa
 
 enum WHCScanProjectType {
@@ -92,6 +92,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func clickStartScan(_ sender: NSButton) {
+        sender.isEnabled = false
         if (iOSRadio.state == 1) {
             scanProjectType = .iOS
         }else {
@@ -145,6 +146,7 @@ class ViewController: NSViewController {
                     }
                 }
                 DispatchQueue.main.async {
+                    sender.isEnabled = true
                     let alert = NSAlert()
                     alert.messageText = "恭喜您WHC已经帮你扫描完成了,是否要把扫描日志保存到文件？"
                     alert.addButton(withTitle: "保存")
@@ -172,6 +174,12 @@ class ViewController: NSViewController {
                     })
                 }
             })
+        }else {
+            sender.isEnabled = true
+            let alert = NSAlert()
+            alert.messageText = "恭喜您WHC提示您请选择扫描项目目录"
+            alert.addButton(withTitle: "确定")
+            alert.runModal()
         }
     }
     
