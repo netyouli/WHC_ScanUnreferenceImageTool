@@ -9,7 +9,7 @@
 
 效果
 ==============
-![](https://github.com/netyouli/WHC_ScanUnreferenceImageTool/blob/master/WHC_ScanUnreferenceImageTool/Tool.gif)
+![](https://github.com/netyouli/WHC_ScanUnreferenceImageTool/blob/master/scanImage.gif)
 
 推荐
 ==============
