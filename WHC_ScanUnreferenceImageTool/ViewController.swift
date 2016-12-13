@@ -239,7 +239,7 @@ class ViewController: NSViewController {
                                         self.filePathArray.append(pathName)
                                     }
                                 case .iOS:
-                                    if suff == "m" || suff == "swift" || suff == "xib" || suff == ".storyboard"{
+                                    if suff == "m" || suff == "swift" || suff == "xib" || suff == "storyboard"{
                                         self.filePathArray.append(pathName)
                                     }
                             }
