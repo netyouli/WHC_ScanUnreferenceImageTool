@@ -23,7 +23,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-// VERSON (1.0.3)
+// VERSON (1.0.4)
 import Cocoa
 
 enum WHCScanProjectType {
@@ -55,6 +55,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        processBar.maxValue = 1.0
+        processBar.minValue = 0.0
         resultContentView.backgroundColor = NSColor(red: 40.0 / 255.0, green: 40.0 / 255.0, blue: 40.0 / 255.0, alpha: 1.0)
     }
     
@@ -100,11 +102,10 @@ class ViewController: NSViewController {
         }
         setResultContent(content: "")
         self.processBar.doubleValue = 0;
-        self.processBar.maxValue = 1.0
-        self.processBar.minValue = 0.0
         if self.directoryText.stringValue.characters.count > 0 {
             self.filePathArray.removeAll()
             self.imageNameArray.removeAll()
+            self.imageFileNameMap.removeAll()
             let directoryFileNameArray = try! fileManager.contentsOfDirectory(atPath: self.directoryText.stringValue)
             DispatchQueue.global().async(execute: {
                 self.execScan(directoryFileNameArray, path: self.directoryText.stringValue)
@@ -113,7 +114,7 @@ class ViewController: NSViewController {
                 for (index,imageName) in self.imageNameArray.enumerated() {
                     var isReference = false
                     DispatchQueue.main.async(execute: {
-                        self.processBar.doubleValue = Double(index) / Double(imageCount)
+                        self.processBar.doubleValue = Double(index + 1) / Double(imageCount)
                     })
                     for filePath in self.filePathArray {
                         DispatchQueue.main.async(execute: {
@@ -140,7 +141,7 @@ class ViewController: NSViewController {
                     if !isReference {
                         self.noReferenceImageNameArray.append(imageName)
                         let originTxt = self.resultContentView.string == nil ? "" : self.resultContentView.string!
-                        DispatchQueue.main.async(execute: {
+                        DispatchQueue.main.sync(execute: {
                             self.setResultContent(content: originTxt + self.imageFileNameMap[imageName]! + "\n")
                         })
                     }
