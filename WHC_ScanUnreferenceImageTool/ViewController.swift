@@ -36,7 +36,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var directoryText: NSTextField!
     @IBOutlet weak var openDirectoryButton: NSButton!
     @IBOutlet weak var resultView: NSScrollView!
-    @IBOutlet weak var resultContentView: NSTextView!
+    @IBOutlet var resultContentView: NSTextView!
     @IBOutlet weak var scanButton: NSButton!
     @IBOutlet weak var progressLabel: NSTextField!
     @IBOutlet weak var processBar: NSProgressIndicator!
