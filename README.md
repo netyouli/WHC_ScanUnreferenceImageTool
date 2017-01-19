@@ -1,4 +1,4 @@
-# WHC_ScanUnreferenceImageTool Version: 1.0.5
+# WHC_ScanUnreferenceImageTool Version: 1.0.6
 简介
 ==============
 - **高效**: Mac扫描项目图片工具(扫描项目里引用但没有使用的图片)
@@ -19,7 +19,7 @@
 
 使用
 ==============
-* 运行该工程生成WHC_DataModelFactory.App 复制到桌面以后双击运行
+* 运行该工程生成WHC_ScanUnreferenceImageTool.App 复制到桌面以后双击运行
 
 要求
 ==============
