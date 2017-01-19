@@ -23,7 +23,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-// VERSON (1.0.5)
+// VERSON (1.0.6)
 import Cocoa
 
 enum WHCScanProjectType {
@@ -142,7 +142,11 @@ class ViewController: NSViewController {
                         self.noReferenceImageNameArray.append(imageName)
                         let originTxt = self.resultContentView.string == nil ? "" : self.resultContentView.string!
                         DispatchQueue.main.sync(execute: {
-                            self.setResultContent(content: originTxt + self.imageFileNameMap[imageName]! + "\n")
+                            var noReferenceImageName = self.imageFileNameMap[imageName]!
+                            if noReferenceImageName.hasSuffix(".imageset") {
+                                noReferenceImageName = imageName + "      [该图片是否引用请去项目的Images.xcassets里核对]"
+                            }
+                            self.setResultContent(content: originTxt + noReferenceImageName + "\n")
                         })
                     }
                 }
@@ -154,7 +158,6 @@ class ViewController: NSViewController {
                     alert.addButton(withTitle: "取消")
                     alert.beginSheetModal(for: self.view.window!, completionHandler: { (modalResponse) in
                         if modalResponse == 1000 {
-                            // 保存
                             let savaPanel = NSSavePanel()
                             savaPanel.message = "Choose the path to save the document"
                             savaPanel.allowedFileTypes = ["txt"]
@@ -162,7 +165,6 @@ class ViewController: NSViewController {
                             savaPanel.canCreateDirectories = true
                             savaPanel.beginSheetModal(for: self.view.window!, completionHandler: {[unowned self] (code) in
                                 if code == 1 {
-                                    /// 保存到文件
                                     do {
                                         let originTxt = self.resultContentView.string == nil ? "" : self.resultContentView.string!
                                         try originTxt.write(toFile: savaPanel.url!.path, atomically: true, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
@@ -190,12 +192,12 @@ class ViewController: NSViewController {
                 var isDirectory = ObjCBool(true)
                 let pathName = path + "/" + fileName
                 let exist = fileManager.fileExists(atPath: pathName, isDirectory: &isDirectory)
-                if exist && isDirectory.boolValue {
+                if exist && isDirectory.boolValue && !fileName.hasSuffix(".imageset") {
                     let tempDirectoryFileNameArray = try! fileManager.contentsOfDirectory(atPath: pathName)
                     self.execScan(tempDirectoryFileNameArray, path: pathName)
                 }else {
                     if fileName.contains(".png") || fileName.contains(".jpg") ||
-                       fileName.contains(".jpeg") || fileName.contains(".gif") {
+                       fileName.contains(".jpeg") || fileName.contains(".gif") || fileName.contains(".imageset") {
                         let name = (fileName as NSString)
                         switch scanProjectType {
                             case .android:
