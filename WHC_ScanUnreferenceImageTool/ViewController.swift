@@ -144,7 +144,7 @@ class ViewController: NSViewController {
                         DispatchQueue.main.sync(execute: {
                             var noReferenceImageName = self.imageFileNameMap[imageName]!
                             if noReferenceImageName.hasSuffix(".imageset") {
-                                noReferenceImageName = imageName + "      [该图片是否引用请去项目的Images.xcassets里核对]"
+                                noReferenceImageName = imageName + "      [该图片删除请去项目的Images.xcassets里删除]"
                             }
                             self.setResultContent(content: originTxt + noReferenceImageName + "\n")
                         })
