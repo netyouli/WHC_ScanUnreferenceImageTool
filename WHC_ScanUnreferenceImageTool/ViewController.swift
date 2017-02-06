@@ -31,6 +31,7 @@ enum WHCScanProjectType {
     case android
 }
 
+
 class ViewController: NSViewController {
     
     @IBOutlet weak var directoryText: NSTextField!
