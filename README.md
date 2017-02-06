@@ -1,4 +1,4 @@
-# WHC_ScanUnreferenceImageTool Version: 1.0.6
+# WHC_ScanUnreferenceImageTool v1.0.7
 简介
 ==============
 - **高效**: Mac扫描项目图片工具(扫描项目里没有使用的资源图片)
