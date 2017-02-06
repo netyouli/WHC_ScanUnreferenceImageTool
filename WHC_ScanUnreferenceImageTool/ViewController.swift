@@ -142,9 +142,9 @@ class ViewController: NSViewController {
                         self.noReferenceImageNameArray.append(imageName)
                         let originTxt = self.resultContentView.string == nil ? "" : self.resultContentView.string!
                         DispatchQueue.main.sync(execute: {
-                            var noReferenceImageName = self.imageFileNameMap[imageName]!
+                            var noReferenceImageName = ">>>>> " + self.imageFileNameMap[imageName]!
                             if noReferenceImageName.hasSuffix(".imageset") {
-                                noReferenceImageName = imageName + "      [该图片删除请去项目的Images.xcassets里删除]"
+                                noReferenceImageName = ">>>>> " + imageName + "      [该图片删除请去项目的Images.xcassets里删除]"
                             }
                             self.setResultContent(content: originTxt + noReferenceImageName + "\n")
                         })
@@ -192,7 +192,7 @@ class ViewController: NSViewController {
                 var isDirectory = ObjCBool(true)
                 let pathName = path + "/" + fileName
                 let exist = fileManager.fileExists(atPath: pathName, isDirectory: &isDirectory)
-                if exist && isDirectory.boolValue && !fileName.hasSuffix(".imageset") {
+                if exist && isDirectory.boolValue && !fileName.hasSuffix(".imageset") && !fileName.hasSuffix(".bundle") {
                     let tempDirectoryFileNameArray = try! fileManager.contentsOfDirectory(atPath: pathName)
                     self.execScan(tempDirectoryFileNameArray, path: pathName)
                 }else {

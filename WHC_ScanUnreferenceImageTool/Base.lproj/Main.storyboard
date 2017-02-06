@@ -675,7 +675,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOM-B4-9cM">
-                                <rect key="frame" x="20" y="648" width="683" height="29"/>
+                                <rect key="frame" x="5" y="661" width="698" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="DxC-Qu-bvR">
                                     <font key="font" metaFont="system"/>
@@ -684,9 +684,9 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpi-iQ-eGw">
-                                <rect key="frame" x="705" y="646" width="92" height="32"/>
+                                <rect key="frame" x="705" y="659" width="92" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="打开目录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R51-SG-wXO">
+                                <buttonCell key="cell" type="push" title="选择项目" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R51-SG-wXO">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
@@ -759,17 +759,17 @@
                                 </connections>
                             </button>
                             <scrollView fixedFrame="YES" borderType="line" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="2" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMg-vd-ekh">
-                                <rect key="frame" x="20" y="70" width="771" height="570"/>
+                                <rect key="frame" x="0.0" y="70" width="811" height="583"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="iSF-9o-Fbs">
-                                    <rect key="frame" x="1" y="1" width="769" height="568"/>
+                                    <rect key="frame" x="1" y="1" width="809" height="581"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="aEG-iJ-Lo3">
-                                            <rect key="frame" x="0.0" y="0.0" width="769" height="568"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="809" height="581"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="769" height="568"/>
+                                            <size key="minSize" width="809" height="581"/>
                                             <size key="maxSize" width="985" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
