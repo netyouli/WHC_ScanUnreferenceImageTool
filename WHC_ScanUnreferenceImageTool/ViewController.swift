@@ -23,7 +23,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-// VERSON (1.0.6)
+// VERSON (1.0.7)
 import Cocoa
 
 enum WHCScanProjectType {
@@ -79,6 +79,10 @@ class ViewController: NSViewController {
     
     @IBAction func clickCheckUpdate(_ sender: NSButton) {
         NSWorkspace.shared().open(URL(string: "https://github.com/netyouli/WHC_ScanUnreferenceImageTool")!)
+    }
+    
+    @IBAction func clickAbout(_ sender: NSButton) {
+        NSWorkspace.shared().open(URL(string: "https://github.com/netyouli/")!)
     }
     
     @IBAction func clickOpenDirectory(_ sender: NSButton) {
@@ -193,7 +197,7 @@ class ViewController: NSViewController {
                 var isDirectory = ObjCBool(true)
                 let pathName = path + "/" + fileName
                 let exist = fileManager.fileExists(atPath: pathName, isDirectory: &isDirectory)
-                if exist && isDirectory.boolValue && !fileName.hasSuffix(".imageset") && !fileName.hasSuffix(".bundle") {
+                if exist && isDirectory.boolValue && !fileName.hasSuffix(".imageset") && !fileName.hasSuffix(".bundle") && fileName != "AppIcon.appiconset" && fileName != "LaunchImage.launchimage" {
                     let tempDirectoryFileNameArray = try! fileManager.contentsOfDirectory(atPath: pathName)
                     self.execScan(tempDirectoryFileNameArray, path: pathName)
                 }else {
